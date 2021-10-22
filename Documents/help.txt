@@ -1,0 +1,29 @@
+
+
+Place api key : AIzaSyBaX4PGaqdi-Znh910S4DGkFhtuavUiomk
+
+
+
+tawck to credentials :
+
+nycgrowstogether@gmail.com
+NYC123?!
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6172b51986aee40a5737dfbf/1fik16rh4';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+GOOGLE_CLIENT_ID=295960443184-rov9enmsrpnii7elofrrit3jcpd89j7j.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+GOOGLE_REDIRECT_URI=https://nycgrowstogether.com/login/google/callback

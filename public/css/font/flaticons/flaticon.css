@@ -1,0 +1,61 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 11/02/2021 17:13
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-deal:before { content: "\f100"; }
+.flaticon-question:before { content: "\f101"; }
+.flaticon-accounting:before { content: "\f102"; }
+.flaticon-cloud:before { content: "\f103"; }
+.flaticon-balance:before { content: "\f104"; }
+.flaticon-camera:before { content: "\f105"; }
+.flaticon-calendar:before { content: "\f106"; }
+.flaticon-paper-plane:before { content: "\f107"; }
+.flaticon-save-file-option:before { content: "\f108"; }
+.flaticon-cake:before { content: "\f109"; }
+.flaticon-phone-call:before { content: "\f10a"; }
+.flaticon-email:before { content: "\f10b"; }
+.flaticon-placeholder:before { content: "\f10c"; }
+.flaticon-gender-equality:before { content: "\f10d"; }
+.flaticon-entrepreneur:before { content: "\f10e"; }
+.flaticon-group:before { content: "\f10f"; }
+.flaticon-job-search:before { content: "\f110"; }
+.flaticon-menu:before { content: "\f111"; }
+.flaticon-pin:before { content: "\f112"; }
+.flaticon-wall-clock:before { content: "\f113"; }
+.flaticon-file:before { content: "\f114"; }
+.flaticon-job-seeker:before { content: "\f115"; }
+.flaticon-job-search-1:before { content: "\f116"; }
+.flaticon-label:before { content: "\f117"; }
+.flaticon-employee:before { content: "\f118"; }
+.flaticon-business-idea:before { content: "\f119"; }
+.flaticon-job:before { content: "\f11a"; }
+.flaticon-sun:before { content: "\f11b"; }
+.flaticon-sun-1:before { content: "\f11c"; }
