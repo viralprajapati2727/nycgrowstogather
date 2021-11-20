@@ -32,7 +32,7 @@
                     </div>
                     <div class="user-detials">
                         <h2>{{ $profile->name }}</h2>
-                        <div class="row">
+                        <div class="row u-detail">
                             @isset($profile->userProfile->dob)
                             <div class="col-md-4 col-12">
                                 <div class="d-flex align-items-center">
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row u-detail">
                             @if ($profile->userProfile->is_email_public > 0 || Auth::id() == $profile->id)
                             <div class="col-md-4 col-12">
                                 <div class="d-flex align-items-center">

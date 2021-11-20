@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-5 register-form">
             <div class="card">
-                <div class="card-header">{{ __('Welcome! to MEA.') }}</div>
+                <div class="card-header">{{ __('Welcome! to NYC GT.') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" name="SignupForm" class="SignupForm">
                         @csrf
@@ -82,11 +82,11 @@
                                     <strong>Login With Google</strong>
                                 </a>
                                 <br />
-                                <a href="{{ url('login/facebook') }}" style="background-color: #4267B2" class="btn btn-lg btn-warning btn-block">
+                                {{-- <a href="{{ url('login/facebook') }}" style="background-color: #4267B2" class="btn btn-lg btn-warning btn-block">
                                     <strong>Login With Facebook</strong>
-                                </a>
+                                </a> --}}
                                 <div class="login-link text-right">
-                                    <p>Already a MEA member? <a href="{{ route('login') }}">Login</a></p>
+                                    <p>Already a NYC GT  member? <a href="{{ route('login') }}">Login</a></p>
                                 </div>
                             </div>  
                         </div>

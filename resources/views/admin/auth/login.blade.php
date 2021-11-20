@@ -6,7 +6,7 @@
         @csrf
         <div class="text-center">
             <a href="{{ url('/') }}" class="d-inline-block mb-2">
-                <img src="{{ Helper::assets('images/logo.png') }}" alt="logo" height="150" width="150">
+                <img src="{{ Helper::assets('images/logo.png') }}" alt="logo" height="" width="100%">
             </a>
         </div>
         <div class="card mb-0">

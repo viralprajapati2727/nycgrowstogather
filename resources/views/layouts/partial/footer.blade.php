@@ -8,7 +8,7 @@
                         <li><a href="{{ route('page.about-us') }}">About</a></li>
                         {{-- <li><a href="{{ route('page.team') }}">Team</a></li> --}}
                         <li><a href="{{ route('page.contact-us') }}">Contact</a></li>
-                        <li><a href="{{ route('page.faq') }}">FAQ</a></li>
+                        {{-- <li><a href="{{ route('page.faq') }}">FAQ</a></li> --}}
                         {{-- <li><a href="javascript:;">Career opportunities</a></li> --}}
                     </ul>   
                 </div>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-sm-4 footer-col-wrap">
                 <div class="footer-col">
-                    <h3 class="f-title"> <img src="{{ Helper::assets('images/logo.png') }}" class="logo" alt=""> Register for MEA updates</h3>
+                    <h3 class="f-title"> <img src="{{ Helper::assets('images/logo-white.png') }}" class="logo" alt=""> Register for NYC grows together updates</h3>
                     <div class="newsletter-wrap">
                         <form action="{{ route('subscribe-email') }}" method="POST">
                             <div class="form-control">
@@ -41,21 +41,21 @@
                             {{-- <li>
                                 <a href="javascript:;"><i class="fa fa-twitter"></i></a>
                             </li> --}}
-                            <li>
-                                <a href="https://www.facebook.com/MEA.Global.Association" target="_blank"><i class="fa fa-facebook"></i></a>
-                            </li>
+                            {{-- <li>
+                                <a href="javascript:;" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li> --}}
                             {{-- <li>
                                 <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
                             </li> --}}
-                            <li>
-                                <a href="https://www.instagram.com/mea_network/" target="_blank"><i class="fa fa-instagram"></i></a>
-                            </li>
+                            {{-- <li>
+                                <a href="javascript:;" target="_blank"><i class="fa fa-instagram"></i></a>
+                            </li> --}}
                             {{-- <li>
                                 <a href="javascript:;"><i class="fa fa-google"></i></a>
                             </li>--}}
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCb9Gu90KunkdKZ6vIqVErmw" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                            </li> 
+                            {{-- <li>
+                                <a href="javascript:;" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            </li>  --}}
                         </ul>
                     </div>
                 </div>

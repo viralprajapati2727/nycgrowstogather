@@ -46,7 +46,7 @@ class SendMailController extends Controller {
 				$email_body = str_replace('{user_name}', $user_name, $email_body);
 				// $attachment = Helper::assets('images/MEA-User-Guide.pdf');
 				// $attachment = base_path().'/public/images/MEA-User-Guide.pdf';
-				$attachment = public_path('images/MEA-User-Guide.pdf');
+				// $attachment = public_path('images/MEA-User-Guide.pdf');
 					break;
 			case 3:
 				//Forgot Password- Password Reset Link

@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="content about-content">
                     <h1>About us</h1>
-                    <p>Our goal is to build a global community of professionals and entrepreneurs!</p>
+                    <p> Our goal is to empower our fellow NYC community to help them succeed as students, entrepreneurs, professionals, and business owners!</p>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
                     <h2>Who Are We?</h2>
                 </div>
                 <div class="content">
-                    <p>We are comprised of diverse professionals, entrepreneurs, students and community leaders looking to make a positive impact in the world. From striving to be at the top of our professions in healthcare, technology, financial, real estate and various industries to; creating and running successful startups, we want to both empower and make a positive impact in our global communities.</p>
+                    <p>We are composed of diverse professionals, entrepreneurs, students and community leaders looking to make a positive impact in NYC. From striving to be at the top of our professions in healthcare, technology, financial, real estate and various industries to; creating and running successful startups, we want to both empower and make a positive impact in our global communities.</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                         <div class="content-inner">
                             <h2 class="title">Our Mission</h2>
                             <div class="text">
-                                <p>We at MEA are on a mission to build a global team of entrepreneurs and professionals. This platform provides the space and tools to assist with collaborating on different ventures, gain insightful feedback, post jobs and find team members while also helping those just starting out with their business or startup with the resources they need, and to raise capital to help their dream become a reality! </p>
+                                <p>We at NYC GT are on a mission to build diverse and successful entrepreneurs and professionals in NYC. This platform provides the space and tools to assist with collaborating on different ventures, gain insightful feedback, post jobs and find team members while also helping those just starting out with their business or startup with the resources they need, and to raise capital to help their dream become a reality! </p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                     <h2>Why Us?</h2>
                 </div>
                 <div class="content">
-                    <p>We at MEA come from all walks of life and professional backgrounds. We all had to endure different challenges and overcome difficult obstacles, which is why we would like to help others on their path towards success. As passion led us here it will be our collective effort and core values that will help all of us reach our goals and make a positive impact!</p>
+                    <p>We at NYC GT are on a mission to build a global team of entrepreneurs and professionals. This platform provides the space and tools to assist with collaborating on different ventures, gain insightful feedback, post jobs and find team members while also helping those just starting out with their business or startup with the resources they need, and to raise capital to help their dream become a reality!</p>
                 </div>
             </div>
         </div>

@@ -70,7 +70,7 @@
                                         <i class="fa fa-envelope"></i>
                                     </div>
                                     <div class="contact-dtl-body">
-                                        <a href="mailto: Info@MEA-Community.com ">Info@MEA-Community.com </a>
+                                        <a href="mailto: Nycgrowstogether@gmail.com">Nycgrowstogether@gmail.com </a>
                                     </div>
                                 </div>
                             </div>
@@ -80,22 +80,21 @@
                                 {{-- <li>
                                     <a href="javascript:;" class="twitter"><i class="fa fa-twitter"></i></a>
                                 </li> --}}
-                                <li>
-                                    {{-- <a href="javascript:;" class="facebook"><i class="fa fa-facebook"></i></a> --}}
-                                    <a href="https://www.facebook.com/MEA.Global.Association" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                </li>
+                                {{-- <li>
+                                    <a href="javascript:;" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                </li> --}}
                                 {{-- <li>
                                     <a href="javascript:;" class="linkedin"><i class="fa fa-linkedin"></i></a>
                                 </li> --}}
-                                <li>
-                                    <a href="https://www.instagram.com/mea_network/" target="_blank" class="insta"><i class="fa fa-instagram"></i></a>
-                                </li>
+                                {{-- <li>
+                                    <a href="javascript:;" target="_blank" class="insta"><i class="fa fa-instagram"></i></a>
+                                </li> --}}
                                 {{-- <li>
                                     <a href="javascript:;" class="google"><i class="fa fa-google"></i></a>
                                 </li> --}}
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCb9Gu90KunkdKZ6vIqVErmw" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                </li>
+                                {{-- <li>
+                                    <a href="javascript:;" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>

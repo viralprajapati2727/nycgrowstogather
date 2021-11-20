@@ -10,7 +10,7 @@
                         </li>
                         <li>
                             <i class="flaticon-email"></i>
-                            <a href="mailto: infomuslimstartups@gmail.com">infomuslimstartups@gmail.com</a>
+                            <a href="mailto: Nycgrowstogether@gmail.com">Nycgrowstogether@gmail.com</a>
                         </li>
                     </ul>
                 </div>

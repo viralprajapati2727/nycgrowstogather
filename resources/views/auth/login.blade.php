@@ -70,9 +70,9 @@
                                     <strong>Login With Google</strong>
                                 </a>
                                 <br />
-                                <a href="{{ url('login/facebook') }}" style="background-color: #4267B2" class="btn btn-lg btn-warning btn-block">
+                                {{-- <a href="{{ url('login/facebook') }}" style="background-color: #4267B2" class="btn btn-lg btn-warning btn-block">
                                     <strong>Login With Facebook</strong>
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>
