@@ -96,6 +96,8 @@ class RegisterController extends Controller
                 'type' => isset($data['user_type'] ) && $data['user_type'] == 2 ? config('constant.USER.TYPE.SIMPLE_USER'):config('constant.USER.TYPE.ENTREPRENEUR'),
                 'ip_address' => \Request::ip(),
                 'logo' => '',
+                'is_active' => 1,
+                'email_verified_at' => date('Y-m-d H:i:s'),
             ];
             $user = User::create($user_data);
 
@@ -121,8 +123,8 @@ class RegisterController extends Controller
     }
 
     protected function registered(Request $request, $user){
-        $this->guard()->logout();
-        return redirect('/')->with('status',trans('auth.account_active'));
+        // $this->guard()->logout();
+        return redirect('/')->with('status',trans('auth.registerd_successfully'));
     }
 
     /*

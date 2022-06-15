@@ -2,10 +2,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="x-ua-compatible" content="IE=10">
-    <meta name="author" content="NYC grows together">
-    <meta name="title" content="NYC grows together">
-    <meta name="keywords" content="NYC grows together">
-    <meta name="description" content="NYC grows together">
+    <meta name="author" content="NYC Grows Together">
+    <meta name="title" content="NYC Grows Together">
+    <meta name="keywords" content="NYC Grows Together">
+    <meta name="description" content="NYC Grows Together">
     <meta property="og:type" content="website" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -87,6 +87,7 @@ Route::group(['middleware' => 'prevent-back-history'] , function () {
         Route::get('members/message/{user?}','MessageController@index')->name('member.message');
         Route::post('members/send-message','MessageController@sendMessage')->name('member.send-message');
         Route::post('get_message_list', 'MessageController@getMessageList')->name('get_message_list');
+        Route::post('chat-block-user', 'MessageController@blockUser')->name('chat-block-user');
 
         // fund request 
         Route::get('fund-requests','GeneralController@getFundRequests')->name('page.fund-requests');

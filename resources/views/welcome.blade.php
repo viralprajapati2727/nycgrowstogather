@@ -7,11 +7,13 @@
             <div id="home-slider" class="owl-carousel owl-theme">
                 <div class="item">
                     <img src="{{ Helper::assets('images/banner/Slider01.jpg') }}" class="" alt="">
-                    <div class="slider-content">
-                        <div class="slider-action">
-                            <a href="{{ route('login') }}" class="header-login">Login Or Register</a>
+                    @guest
+                        <div class="slider-content">
+                            <div class="slider-action">
+                                <a href="{{ route('login') }}" class="header-login">Login Or Register</a>
+                            </div>
                         </div>
-                    </div>
+                    @endguest
                 </div>
                 {{-- <div class="item"><img src="{{ Helper::assets('images/banner/Slider01.jpg') }}" class="" alt=""></div> --}}
             </div>
