@@ -49,7 +49,9 @@
                             </div>
                             <div class="fund-actions">
                                 <button class="btn share-btn">Share</button>
-                                <button class="btn donate-btn" data-toggle="modal" data-target="#donate" >Donate now</button>
+                                @if ($stripeAccountExists)
+                                    <button class="btn donate-btn" data-toggle="modal" data-target="#donate" >Donate now</button>
+                                @endif
                             </div>
                             <div class="sidebar-footer">
                                 <ul>

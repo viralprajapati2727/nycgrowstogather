@@ -175,4 +175,22 @@ class CommunityController extends Controller
             return array('status' => '0', 'msg_fail' => 'Something went wrong');
         }
     }
+    public function deleteQuestion($id){
+        $responseData = array();
+        $responseData['status'] = 0;
+        $responseData['message'] = '';
+        $responseData['errors'] = array();
+        $responseData['data'] = [];
+
+        if ($id) {
+            Community::where('id', $id)->where('user_id',Auth::id())->delete();
+        }
+
+        $responseData['status'] = 200;
+        $responseData['message'] = 'Question has been deleted successfully';
+
+        Session::flash('success', $responseData['message']);
+        
+        return $this->commonResponse($responseData, 200);
+    }
 }

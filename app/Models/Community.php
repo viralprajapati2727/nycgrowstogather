@@ -12,7 +12,7 @@ use Auth;
 class Community extends Model
 {
 
-    use Sluggable, Commentable;
+    use Sluggable, Commentable, SoftDeletes;
 
     protected $guarded = [];
 

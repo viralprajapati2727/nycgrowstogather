@@ -26,7 +26,7 @@ class JobController extends Controller
             $keyword = $request->keyword;
         }
 
-        $Query = PostJob::select('id','job_title_id','other_job_title','job_type','job_type_id','job_unique_id','currency_id','min_salary','max_salary','job_start_time','job_end_time','job_status','created_at')->orderBy('id','desc');
+        $Query = PostJob::select('id','job_title_id','other_job_title','other_business_category','job_type','job_type_id','job_unique_id','currency_id','min_salary','max_salary','job_start_time','job_end_time','job_status','created_at')->orderBy('id','desc');
         $Query->whereIn('job_status',[0,2]);
 
         if($request->has('job_title_id') && $request->job_title_id != null){

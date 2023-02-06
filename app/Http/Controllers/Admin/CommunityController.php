@@ -70,6 +70,7 @@ class CommunityController extends Controller{
             // $action_link .= "<a href='javascript:;' class='category_deleted' data-id='".$Query->id . "' data-active='2' data-inuse=''><i class='icon-trash mr-3 text-danger'></i></a>";
 
             $action_link .= "<a href=".$details_link." > <i class='icon-eye'></i> view </a>";
+            $action_link .= "<a href='javascript:;' class='question_deleted' data-id='".$Query->id . "' data-inuse=''><i class='icon-trash ml-3 text-danger'></i></a>";
 
             return $action_link;
         })
@@ -84,6 +85,25 @@ class CommunityController extends Controller{
         $question = Community::with('communityTags')->with('communityCategory')->with('communityLikes')->where('slug',$question_id)->select('id', 'slug','user_id', 'title', 'question_category_id', 'description', 'tags', 'views', 'created_at', "other_category")->first();
 
         return view('admin.community.details',compact('question'));
+    }
+
+    public function destroy(Request $request){
+        if(isset($request->id)){
+            $id = $request->id;
+            DB::beginTransaction();
+            try{
+                $user = Auth::user();
+                $question = Community::find($id);
+                $question->delete();
+                $question->deleted_by = $user->id;
+                $question->save();
+                DB::commit();
+                return array('status' => '200', 'msg_success' => 'Community has been deleted Successfully');
+            } catch(Exception $e){
+                DB::rollback();
+                return array('status' => '0', 'msg_fail' => 'Something went wrong');
+            }
+        }
     }
 
 }

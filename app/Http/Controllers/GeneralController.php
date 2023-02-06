@@ -32,6 +32,7 @@ use App\Models\StripeAccount;
 use App\Models\PaymentLogs;
 use Stripe\Stripe;
 use Stripe\Checkout;
+use App\Models\Team;
 
 class GeneralController extends Controller {
 	
@@ -126,7 +127,9 @@ class GeneralController extends Controller {
 		return view('pages.about-us');
     }
 	public function team() {
-		return view('pages.our-team');
+
+		$teams = Team::where('status',1)->get();
+		return view('pages.our-team', compact('teams'));
     }
 
 	public function resource($id) {
@@ -351,7 +354,9 @@ class GeneralController extends Controller {
 							return redirect(route('page.fund-requests.view', ['id'=> $id]));
 						}
 
-            return view('pages.view-fund-request',compact('fund', "message", "donors", "justDonors"));
+						$stripeAccountExists = StripeAccount::where('user_id', $fund->user_id)->where('details_submitted', 'true')->exists();
+
+            return view('pages.view-fund-request',compact('fund', "message", "donors", "justDonors","stripeAccountExists"));
 
         }catch(Exception $e){
             DB::rollback();

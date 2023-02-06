@@ -215,11 +215,15 @@ $(document).ready(function () {
 });
 
 function getActiveUserMessages(){
+    $('.user-band').removeClass('li-active');
+    $('.chat-section .user-band a.active').parent('li').addClass('li-active');
     var group_id = $('.chat-section .user-band .active').attr('data-group');
     var activated_user_name = $('.chat-section .user-band .active .user-name').text();
     $('.activated-user-name').text(activated_user_name);
     $('#f-send-message .g_id').val(group_id);
     loadMessages(group_id)
+
+    $('.chat-section .user-band a.active').parent('li').find('.unread_count').remove();
 }
 
 function loadMessages(group_id){

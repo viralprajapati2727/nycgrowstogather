@@ -79,7 +79,7 @@ class JobController extends Controller
             }
 
             if($request->job_type == 1){ //postjob
-                $param2 = ["job_type" => $request->job_type, "job_title_id" => $request->job_title_id, "other_job_title" => $request->other_job_title, "business_category_id" => $request->business_category_id, "job_type_id" => $request->job_type_id, "currency_id" => $request->currency_id,
+                $param2 = ["job_type" => $request->job_type, "job_title_id" => $request->job_title_id, "other_job_title" => $request->other_job_title, "other_business_category" => $request->other_business_category, "business_category_id" => $request->business_category_id, "job_type_id" => $request->job_type_id, "currency_id" => $request->currency_id,
                 "salary_type_id" => $request->salary_type_id, "min_salary" => $request->min_salary, "max_salary" => $request->max_salary, "job_start_time" => $request->job_start_time,"job_end_time" => $request->job_end_time, "time_zone" => $request->time_zone,
                 "is_paid" => $is_paid,"description" => $request->description,"location" => $request->location,"created_by" => $user_id, "updated_by" => $user_id];
 

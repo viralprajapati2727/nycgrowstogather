@@ -19,6 +19,13 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on('change','#business_category_id',function(){
+        $('.div_other_business_category').hide();
+        if($(this).val() == '-1'){
+            $('.div_other_business_category').show();
+        }
+    });
+
     $('.form-check-input-styled').uniform();
     $(document).on('change','.is_find_team_member',function(){
         $('.team_member_text_div').hide();
@@ -242,6 +249,10 @@ $(document).ready(function(){
             business_category_id: {
                 required: true,
             },
+            other_business_category:{
+                required: { depends: function(element) { return $('#business_category_id').val() == "-1" } },
+                maxlength:100,
+            },
             job_type_id: {
                 required: true,
             },
@@ -293,6 +304,9 @@ $(document).ready(function(){
             },
             business_category_id: {
                 required: "Please select business category",
+            },
+            other_business_category: {
+                required: "Please enter other business category",
             },
             job_type_id: {
                 required: "Please select job type",

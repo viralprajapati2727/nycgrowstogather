@@ -26,7 +26,7 @@ $share_url = Request::url();
                                     </h2>
                                     <div class="job-company-location">
                                         <p class="company">
-                                            {{ $job->job_type == 1 ? $job->category->title. " | " : ""  }}
+                                            {{ $job->job_type == 1 ? ($job->business_category_id > 0 ? $job->category->title : $job->other_business_category). " | " : ""  }}
                                             {{ Helper::timeAgo($job->created_at) }}</p>
                                     </div>
                                     <div class="d-sm-inline d-inline-block mr-3">

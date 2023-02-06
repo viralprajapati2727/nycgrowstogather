@@ -120,6 +120,7 @@ Route::group(['middleware' => 'prevent-back-history'] , function () {
             //community
             Route::get('community', 'CommunityController@index')->name('community.index');
             Route::post('update-community', 'CommunityController@updateCommunity')->name('community.update-community');
+            Route::post('delete-question/{id}', 'CommunityController@deleteQuestion')->name('community.delete-question');
             
             Route::get('drop-your-idea','GeneralController@idea')->name('page.drop-idea');
             Route::post('drop-your-ideas', 'GeneralController@sendIdea')->name('idea.send-idea');
@@ -252,6 +253,7 @@ Route::group(['middleware' => 'prevent-back-history'] , function () {
 		Route::get('question','Admin\CommunityController@index')->name('admin.question.index');
         Route::post('community-filter', 'Admin\CommunityController@ajaxData')->name('question-filter');
         Route::get('question/{question_id}','Admin\CommunityController@detail')->name('question.details');
+        Route::post('question-destroy','Admin\CommunityController@destroy')->name('admin.question.destroy');
         
         // Startup Portal
         Route::get('startup-portal','Admin\StartupPortalController@index')->name('admin.startup-portal.index');
@@ -290,6 +292,14 @@ Route::group(['middleware' => 'prevent-back-history'] , function () {
         Route::post('messages-filter', 'Admin\MessageController@ajaxData')->name('admin.messages-filter');
         Route::get('messages/detail/{id}', 'Admin\MessageController@detail')->name('admin.message.detail');
         Route::get('messages/download/{type}/{id}', 'Admin\MessageController@download')->name('admin.message.download');
+
+
+         //Team
+		Route::get('teams','Admin\TeamController@index')->name('admin.teams.index');
+        Route::post('teams/store', 'Admin\TeamController@store')->name('admin.teams.store');
+        Route::post('team-filter', 'Admin\TeamController@ajaxData')->name('team-filter');
+        Route::post('change-team-status', 'Admin\TeamController@changeStatus')->name('admin.change-team-status');
+        Route::delete('teams/{id}', 'Admin\TeamController@destroy')->name('admin.teams.delete');
         
     });
 });

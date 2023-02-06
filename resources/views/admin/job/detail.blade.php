@@ -54,7 +54,7 @@
                                 <label class="font-weight-bold label-before">Business Category</label>
                             </div>
                             <div class="col-lg-8">
-                                <p class="font-weight-bold">{{ $job->category->title  }}</p>
+                                <p class="font-weight-bold">{{ $job->business_category_id > 0 ? $job->category->title : $job->other_business_category }}</p>
                             </div>
                         </div>
                         <div class="form-group row">

@@ -46,7 +46,7 @@
                         <div class="row mt-md-0 mt-3 pb-0 justify-content-center">
                             <div class="col-lg-9 col-md-12">
                                 <div class="row mt-md-2">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-control-label">Job Title <span class="required-star-color">*</span></label>
                                             <select name="job_title_id" id="job_title_id" class="form-control select2 no-search-select2" data-placeholder="Select Job Title">
@@ -59,19 +59,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Business Category <span class="required-star-color">*</span></label>
-                                            <select name="business_category_id" id="business_category_id" class="form-control select2 no-search-select2" data-placeholder="Select Business Category">
-                                                <option></option>
-                                                @forelse ($business_categories as $category)
-                                                    <option value="{{ $category->id }}" {{ ($is_job) ? ($job->business_category_id == $category->id ? 'selected' : ''): ''  }}>{{ $category->title }}</option>
-                                                @empty
-                                                @endforelse
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-control-label">Job Type <span class="required-star-color">*</span></label>
                                             <select name="job_type_id" id="job_type_id" class="form-control select2 no-search-select2" data-placeholder="Select Job Type">
@@ -89,6 +77,27 @@
                                         <div class="form-group">
                                             <label class="text-secondary">Other Job Title</label>
                                             <input type="text" name="other_job_title" id="other_job_title" class="form-control" placeholder="Other Job Title" value="{{ ($is_job && $job->job_type == 1) ? $job->other_job_title : old('other_job_title') }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Business Category <span class="required-star-color">*</span></label>
+                                            <select name="business_category_id" id="business_category_id" class="form-control select2 no-search-select2" data-placeholder="Select Business Category">
+                                                <option></option>
+                                                @forelse ($business_categories as $category)
+                                                    <option value="{{ $category->id }}" {{ ($is_job) ? ($job->business_category_id == $category->id ? 'selected' : ''): ''  }}>{{ $category->title }}</option>
+                                                @empty
+                                                @endforelse
+                                                <option value="-1" {{ ($is_job) ? ($job->business_category_id == '-1' ? 'selected' : ''): ''  }}> Other </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 div_other_business_category" style="display: {{ (!$is_job || $is_job && $job->business_category_id > 0) ? 'none' : 'block' }}">
+                                        <div class="form-group">
+                                            <label class="text-secondary">Other Business Category</label>
+                                            <input type="text" name="other_business_category" id="other_business_category" class="form-control" placeholder="Other Business Category" value="{{ ($is_job && $job->job_type == 1) ? $job->other_business_category : old('other_business_category') }}">
                                         </div>
                                     </div>
                                 </div>

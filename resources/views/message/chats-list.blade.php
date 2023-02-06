@@ -21,15 +21,19 @@
                                 }
                             }
 
+                            $groupMessageCount = Helper::groupMessageCount(Auth::id(), $group->id);
+
                         @endphp
-                        <a class="nav-link {{ $activated }}" data-toggle="pill" href="#chat{{ $group->id }}" role="tab" data-group="{{ $group->id }}">
-                            <div class="profile-image-wrap">
+                         <div class="profile-image-wrap">
+                            <a href="{{ route('user.view-profile',['slug' => Auth::user()->slug]) }}">
                                 <img class="chat-icons profile-image" height="50" src="{{  $img_url }}">
-                            </div>
+                            </a>
+                        </div>
+                        <a class="nav-link {{ $activated }}" data-toggle="pill" href="#chat{{ $group->id }}" role="tab" data-group="{{ $group->id }}">
                             <span class="user-name">{{ ucwords(($member->user->name ?? "name")) }}</span>
                         </a> 
-                        @if(isset($unreadmsg_data) && $unreadmsg_data > 0) 
-                            <div class="unread_count">{{ $unreadmsg_data }}</div>
+                        @if(isset($groupMessageCount) && $groupMessageCount > 0) 
+                            <div class="unread_count">{{ $groupMessageCount }}</div>
                         @endif
                     </li>
                 @endif

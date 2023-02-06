@@ -111,6 +111,8 @@
                                         <option></option>
                                         <option value="Male" {{ (old("gender") == 'Male' || (isset($profile->userProfile->gender) && $profile->userProfile->gender == 'Male')) ? 'selected' : '' }}>Male</option>
                                         <option value="Female" {{ (old("gender") == 'Female' || (isset($profile->userProfile->gender) && $profile->userProfile->gender == 'Female')) ? 'selected' : '' }}>Female</option>
+                                        <option value="Other" {{ (old("gender") == 'Other' || (isset($profile->userProfile->gender) && $profile->userProfile->gender == 'Other')) ? 'selected' : '' }}>Other</option>
+                                        <option value="Prefer Not To Say" {{ (old("gender") == 'Prefer Not To Say' || (isset($profile->userProfile->gender) && $profile->userProfile->gender == 'Prefer Not To Say')) ? 'selected' : '' }}>Prefer Not To Say</option>
                                     </select>
                                 </div>
                             </div>

@@ -558,7 +558,7 @@ class Helper
     public static function getJobData($user_id = null, $job_id = null, $job_status = null, $all = true, $paginate = null) {
         $selectedFields = ['*'];
         if(is_null($job_id)){
-            $selectedFields = ['id','user_id','job_title_id','job_type','other_job_title','job_type_id','job_unique_id','job_status','location','job_count','created_at'];
+            $selectedFields = ['id','user_id','job_title_id','job_type','other_job_title','other_business_category','job_type_id','job_unique_id','job_status','location','job_count','created_at'];
         }
 
         $data = PostJob::select($selectedFields)->with([
@@ -624,6 +624,11 @@ class Helper
             $data->where(function($query1) use ($like_keywords) {
                 foreach($like_keywords as $keyword){
                     $query1->orWhere('other_job_title', 'LIKE', $keyword);
+                }
+            });
+            $data->where(function($query1) use ($like_keywords) {
+                foreach($like_keywords as $keyword){
+                    $query1->orWhere('other_business_category', 'LIKE', $keyword);
                 }
             });
             $data->orWhere(function($data1) use($like_keywords){
@@ -705,7 +710,7 @@ class Helper
         return $data;
     }
     public static function getRecentJobs() {
-        $selectedFields = ['id','user_id','job_title_id','job_type','other_job_title','job_type_id','job_unique_id','job_status','location','job_count','created_at'];
+        $selectedFields = ['id','user_id','job_title_id','job_type','other_job_title','other_business_category','job_type_id','job_unique_id','job_status','location','job_count','created_at'];
         $data = PostJob::select($selectedFields)->with([
             
             'jobTitle'=> function($query){
@@ -802,6 +807,11 @@ class Helper
     public static function messageCount($user_id){
         $messageCount = ChatMessagesReceiver::where('receiver_id', $user_id)->where('unreadable_count','>', 0)->groupBy('group_id')->get();
         $messageCount = $messageCount->sum('unreadable_count');
+        return $messageCount;
+    }
+    public static function groupMessageCount($user_id, $group_id){
+        $messageCount = ChatMessagesReceiver::where('receiver_id', $user_id)->where('group_id', $group_id)->first();
+        $messageCount = isset($messageCount->unreadable_count) ? $messageCount->unreadable_count : 0;
         return $messageCount;
     }
 }
